@@ -2,6 +2,7 @@ package dev.alexengrig.seriouslygoodsoftwarebook;
 
 public class Speed2Container implements Container<Speed2Container> {
     private Speed2Container next;
+    private int size = 1;
     private double amount;
 
     public Speed2Container() {
@@ -26,6 +27,20 @@ public class Speed2Container implements Container<Speed2Container> {
         return amount;
     }
 
+    @Override
+    public int groupSize() {
+        updateGroup();
+        return size - 1;
+    }
+
+    @Override
+    public void flush() {
+        Speed2Container current = this;
+        do {
+            current.amount = 0;
+        } while ((current = current.next) != this);
+    }
+
     private void updateGroup() {
         Speed2Container current = this;
         double totalAmount = 0;
@@ -38,6 +53,7 @@ public class Speed2Container implements Container<Speed2Container> {
         current = this;
         do {
             current.amount = newAmount;
+            current.size = sizeGroup;
         } while ((current = current.next) != this);
     }
 }

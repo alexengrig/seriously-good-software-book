@@ -37,6 +37,16 @@ public class Speed1Container implements Container<Speed1Container> {
         return group.amountPerContainer;
     }
 
+    @Override
+    public int groupSize() {
+        return group.members.size() - 1;
+    }
+
+    @Override
+    public void flush() {
+        group.amountPerContainer = 0;
+    }
+
     private static class Group {
         Set<Speed1Container> members;
         double amountPerContainer;

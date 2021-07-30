@@ -43,4 +43,16 @@ public class ReferenceContainer implements Container<ReferenceContainer> {
             container.amount += amountPerContainer;
         }
     }
+
+    @Override
+    public int groupSize() {
+        return group.size() - 1;
+    }
+
+    @Override
+    public void flush() {
+        for (ReferenceContainer container : group) {
+            container.amount = 0;
+        }
+    }
 }

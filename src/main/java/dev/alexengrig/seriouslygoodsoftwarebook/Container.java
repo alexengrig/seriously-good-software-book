@@ -6,4 +6,8 @@ public interface Container<C extends Container<C>> {
     void addWater(double amount);
 
     double getAmount();
+
+    int groupSize();
+
+    void flush();
 }

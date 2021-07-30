@@ -40,6 +40,18 @@ public class Speed3Container implements Container<Speed3Container> {
         return root.amount;
     }
 
+    @Override
+    public int groupSize() {
+        Speed3Container root = findRootAndCompress();
+        return root.size - 1;
+    }
+
+    @Override
+    public void flush() {
+        Speed3Container root = findRootAndCompress();
+        root.amount = 0;
+    }
+
     private Speed3Container findRootAndCompress() {
         if (parent != this) {
             parent = parent.findRootAndCompress();

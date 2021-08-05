@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-abstract class ContainerTest<C extends Container<C>> {
+public abstract class ContainerTest<C extends Container<C>> {
     protected abstract C createContainer();
 
     @Test

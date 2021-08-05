@@ -1,6 +1,6 @@
-package dev.alexengrig.seriouslygoodsoftwarebook;
+package dev.alexengrig.seriouslygoodsoftwarebook.speed;
 
-import dev.alexengrig.seriouslygoodsoftwarebook.speed.Speed2Container;
+import dev.alexengrig.seriouslygoodsoftwarebook.ContainerTest;
 
 class Speed2ContainerTest extends ContainerTest<Speed2Container> {
     @Override

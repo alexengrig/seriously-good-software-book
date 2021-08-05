@@ -43,7 +43,7 @@ public class Speed3Container implements Container<Speed3Container> {
     @Override
     public int groupSize() {
         Speed3Container root = findRootAndCompress();
-        return root.size - 1;
+        return root.size;
     }
 
     @Override

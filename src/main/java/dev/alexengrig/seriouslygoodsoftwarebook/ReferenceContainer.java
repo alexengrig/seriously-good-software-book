@@ -46,7 +46,7 @@ public class ReferenceContainer implements Container<ReferenceContainer> {
 
     @Override
     public int groupSize() {
-        return group.size() - 1;
+        return group.size();
     }
 
     @Override

@@ -19,9 +19,9 @@ abstract class ContainerTest<C extends Container<C>> {
         assertEquals(10, container1.getAmount());
         assertEquals(10, container2.getAmount());
         assertEquals(25, container3.getAmount());
-        assertEquals(1, container1.groupSize());
-        assertEquals(1, container2.groupSize());
-        assertEquals(0, container3.groupSize());
+        assertEquals(2, container1.groupSize());
+        assertEquals(2, container2.groupSize());
+        assertEquals(1, container3.groupSize());
         container1.flush();
         container3.flush();
         assertEquals(0, container1.getAmount());

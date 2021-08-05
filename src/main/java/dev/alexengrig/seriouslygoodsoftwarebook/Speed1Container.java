@@ -39,7 +39,7 @@ public class Speed1Container implements Container<Speed1Container> {
 
     @Override
     public int groupSize() {
-        return group.members.size() - 1;
+        return group.members.size();
     }
 
     @Override

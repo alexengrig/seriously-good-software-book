@@ -2,7 +2,6 @@ package dev.alexengrig.seriouslygoodsoftwarebook;
 
 public class Speed2Container implements Container<Speed2Container> {
     private Speed2Container next;
-    private int size = 1;
     private double amount;
 
     public Speed2Container() {
@@ -29,8 +28,12 @@ public class Speed2Container implements Container<Speed2Container> {
 
     @Override
     public int groupSize() {
-        updateGroup();
-        return size - 1;
+        int size = 0;
+        Speed2Container current = this;
+        do {
+            size++;
+        } while ((current = current.next) != this);
+        return size;
     }
 
     @Override
@@ -53,7 +56,6 @@ public class Speed2Container implements Container<Speed2Container> {
         current = this;
         do {
             current.amount = newAmount;
-            current.size = sizeGroup;
         } while ((current = current.next) != this);
     }
 }

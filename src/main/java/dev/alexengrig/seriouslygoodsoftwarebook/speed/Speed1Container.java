@@ -1,4 +1,6 @@
-package dev.alexengrig.seriouslygoodsoftwarebook;
+package dev.alexengrig.seriouslygoodsoftwarebook.speed;
+
+import dev.alexengrig.seriouslygoodsoftwarebook.Container;
 
 import java.util.HashSet;
 import java.util.Set;

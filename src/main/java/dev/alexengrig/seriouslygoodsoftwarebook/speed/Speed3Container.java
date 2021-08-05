@@ -1,4 +1,6 @@
-package dev.alexengrig.seriouslygoodsoftwarebook;
+package dev.alexengrig.seriouslygoodsoftwarebook.speed;
+
+import dev.alexengrig.seriouslygoodsoftwarebook.Container;
 
 public class Speed3Container implements Container<Speed3Container> {
     private Speed3Container parent = this;

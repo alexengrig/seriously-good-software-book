@@ -1,4 +1,4 @@
-package dev.alexengrig.seriouslygoodsoftwarebook;
+package dev.alexengrig.seriouslygoodsoftwarebook.multiset;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -14,6 +14,7 @@ class MultiSetTest {
         multiSet.add("Three");
         multiSet.add("Three");
         multiSet.add("Three");
+        assertEquals(0, multiSet.count("Zero"));
         assertEquals(1, multiSet.count("One"));
         assertEquals(2, multiSet.count("Two"));
         assertEquals(3, multiSet.count("Three"));
